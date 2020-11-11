@@ -7,7 +7,7 @@ from time import sleep
 
 #Загрузка звуков игры
 pygame.init()
-sound1 = pygame.mixer.Sound('sound/laser3.ogg')
+sound1 = pygame.mixer.Sound('sound/laser.ogg')
 sound2 = pygame.mixer.Sound('sound/levelup.ogg')
 sound3 = pygame.mixer.Sound('sound/explosion.ogg')
 sound4 = pygame.mixer.Sound('sound/game_over.ogg')
@@ -16,7 +16,7 @@ def check_events(ai_settings, screen, stats, sb, play_button, ship, aliens, bull
 	"""Обрабатывает нажатия клавиш и события мыши."""
 	for event in pygame.event.get():
 		if event.type == pygame.QUIT:
-			with open('Рекорд.txt', 'w') as rec:
+			with open('record.txt', 'w') as rec:
 				rec.write(str(stats.high_score))
 			sys.exit()
 		elif event.type == pygame.KEYDOWN:

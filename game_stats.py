@@ -8,7 +8,7 @@ class GameStats():
 		#Игра Alien Invasion запускается в активном состоянии.
 		self.game_active = False
 		#Рекорд не должен сбрасываться.
-		with open('Рекорд.txt') as rec:
+		with open('record.txt') as rec:
 			record = int(rec.read().strip())
 		self.high_score = record
 		
